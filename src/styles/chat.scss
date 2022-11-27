@@ -1,0 +1,127 @@
+$chat_height: 25em;
+$chat_header_height: 2em;
+
+.chat-window.minimalized {
+  height: $chat_header_height;
+  max-width: 2.5em !important;
+}
+
+.chat-window.loggedout {
+  max-height: 14em;
+  max-width: 25em;
+}
+
+.chat-window.two-panels, .chat-window.three-panels {
+  max-width: 25em;
+}
+
+.header {
+	height: $chat_header_height;
+	min-height: $chat_header_height;
+	width: 100%;
+}
+
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   bottom: 1em;
+//   right: 1em;
+//   position: fixed;
+// }
+
+.chat-window {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.panel-main {
+  grid-row: 1;
+  grid-column: 1 / 6;
+  min-width: 15em;
+  width: 100%;
+  z-index: 100;
+}
+
+.two-panels .panel-left {
+  grid-row: 1;
+  grid-column: 1/2;
+  min-width: 4em;
+  z-index: 200;
+}
+.two-panels .panel-main {
+  grid-row: 1;
+  grid-column: 2 / 6;
+}
+
+.two-panels .panel-right {
+  display: none;
+}
+
+.three-panels .panel-left {
+  grid-row: 1;
+  grid-column: 1/2;
+  min-width: 4em;
+  z-index: 200;
+}
+.three-panels .panel-main {
+  grid-row: 1;
+  grid-column: 2 / 5;
+}
+
+.three-panels .panel-right {
+  grid-row: 1;
+  min-width: 4em;
+  grid-column: 5/6;
+  z-index: 200;
+}
+
+.two-panels .panel-left.expanded {
+  grid-column: 1/5;
+}
+
+.three-panels .panel-left.expanded {
+  grid-column: 1/5;
+}
+
+.all-columns {
+  grid-column: 1/6;
+}
+
+// html, body {
+// 	position: relative;
+// }
+
+// body {
+// 	margin: 0;
+// 	box-sizing: border-box;
+// 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+// 	overflow: hidden;
+// }
+
+.chat-window label {
+	display: block;
+  margin: 0.5em 0;
+}
+  
+.chat-window button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.message-error {
+  padding-top: 1em;
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  color: white;
+}

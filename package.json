@@ -1,0 +1,71 @@
+{
+  "name": "@dweorh/oshu",
+  "version": "0.1.4",
+  "private": false,
+  "description": "The main Oshu's engine",
+  "author": {
+    "name": "Bartlomiej Bak aka dweorh",
+    "email": "bartlomiejbak@dweorh.com"
+  },
+  "scripts": {
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && export CHOKIDAR_USEPOLLING=true && vue-cli-service serve ./dev/main.js",
+    "build": "vue-cli-service build ./src/Chat.vue",
+    "lint": "vue-cli-service lint  ./src/Chat.vue",
+    "serve-win": "vue-cli-service serve ./dev/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./src/Chat.vue",
+  "browser": {
+    "./sfc": "src/Chat.vue"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@dweorh/oshu-crypto": "^0.0.3",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^9.8.6",
+    "core-js": "^3.6.5",
+    "crypto-browserify": "^3.12.0",
+    "debounce": "^1.2.1",
+    "request": "^2.88.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "vue": "^2.7.8",
+    "vue-i18n": "^8.25.0",
+    "vue-router": "^3.5.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.4",
+    "@vue/cli-plugin-eslint": "~5.0.4",
+    "@vue/cli-service": "~5.0.4",
+    "@vue/compiler-sfc": "^3.2.37",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "postcss": "^7.0.39",
+    "sass": "^1.41.1",
+    "sass-loader": "^10.2.0",
+    "vue-template-compiler": "^2.7.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "license": "MIT, CC-NC 4.0"
+}

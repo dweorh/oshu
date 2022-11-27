@@ -1,0 +1,58 @@
+@import './chat.scss';
+
+$chat_height: 25em;
+$chat_header_height: 2em;
+
+.gradient {
+  background: linear-gradient(90deg, #037196 0%, #d2e997 100%);
+}
+.action-icon {
+  height: 1.5em;
+  width: auto;
+}
+
+.action-icon > svg {
+  width: 100%;
+  height: 100%;
+}
+.chat-header-button {
+  background-color: #037196;
+}
+.toggle-panel-button {
+  background-color: #037196;
+}
+
+.chat-window {
+  height: $chat_height;
+  max-width: 15em;
+  color: #222;
+}
+
+.panels {
+  height: calc($chat_height - $chat_header_height);
+  min-height: calc($chat_height - $chat_header_height);
+  grid-template-rows: calc($chat_height - $chat_header_height);
+}
+
+.chat-window label {
+  color: white;
+}
+
+.message-error {
+  color: rgb(204, 53, 37);
+}
+
+.red {
+	background: rgb(204, 53, 37);
+}
+
+.copy-to-clipboard-tooltip {
+  position: absolute;
+  top: 0.75em;
+  right: -2em;
+  font-size: 0.75em;
+  background: #52515191;
+  color: white;
+  padding: 0.25em 0.5em;
+  width: max-content;
+}
